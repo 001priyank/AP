@@ -1,0 +1,13 @@
+{
+  "runtimeOptions": {
+    "framework": {
+      "name": "Microsoft.NETCore.App",
+      "version": "1.1.2"
+    },
+    "gcServer": true,
+    "gcConcurrent": true,
+    "configProperties": {
+      "System.GC.Server": true
+    }
+  }
+}

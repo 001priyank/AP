@@ -1,0 +1,26 @@
+{
+  "name": "alertify",
+  "main": "lib/alertify.js",
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    ".jshintrc",
+    "Gruntfile.js",
+    "package.json",
+    "test",
+    "src",
+    "example"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/fabien-d/alertify.js",
+  "_release": "0.5.0rc1",
+  "_resolution": {
+    "type": "tag",
+    "tag": "0.5.0rc1",
+    "commit": "530bd7a7a116ea1a4c9715bba41f36222eda3eeb"
+  },
+  "_source": "https://github.com/fabien-d/alertify.js.git",
+  "_target": "0.5.0rc1",
+  "_originalSource": "alertify.js",
+  "_direct": true
+}
