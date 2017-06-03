@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using AudioProject.Entities.Orders;
+using AudioProject.Entities.OrderManagement;
 
 namespace AudioProject.Infrastructure
 {
@@ -13,12 +14,68 @@ namespace AudioProject.Infrastructure
         public static void Initialize(IServiceProvider serviceProvider, string imagesPath)
         {
             context = (AudioProjectContext)serviceProvider.GetService(typeof(AudioProjectContext));
-            InitializeOrderType();
             InitializeUserRoles();
+            InitializeOrderType();
+            InitializeOrder();
+           
 
         }
 
-        private static void InitializeOrderType()
+        private static void InitializeOrder()
+        {
+            var user = context.Find<User>(2);
+
+            if (!context.Orders.Any())
+            {
+                var order = new Orders() { OrderStatus = OrderStatus.New,
+                    UserId = user.Id,
+
+                };
+                context.Orders.Add(order);
+                context.SaveChanges();
+
+                var orderItem1 = new OrderItems()
+                {
+                    OrderId = order.Id,
+                    CompletionPercent = 10,
+                    Description = "Custom description",
+                    OrderTypeId = 1,
+                    OrderStatus = OrderStatus.New,
+
+                };
+
+                var orderItem2 = new OrderItems()
+                {
+                    OrderId = order.Id,
+                    CompletionPercent = 20,
+                    Description = "Custom description",
+                    OrderTypeId = 2,
+                    OrderStatus = OrderStatus.New,
+
+                };
+
+                context.OrderItems.AddRange(orderItem1, orderItem2);
+                context.SaveChanges();
+
+                var orderFile1 = new OrderFiles()
+                {
+                    FileName = "a.mp3",
+                    OrderId = order.Id
+
+                };
+                var orderFile2 = new OrderFiles()
+                {
+                    FileName = "b.mp3",
+                    OrderId = order.Id
+
+                };
+                context.OrderFiles.AddRange(orderFile1, orderFile2);
+                context.SaveChanges();
+                }
+
+            }
+
+            private static void InitializeOrderType()
         {
             if (!context.OrderTypeCategorys.Any())
             {

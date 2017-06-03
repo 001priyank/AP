@@ -65,10 +65,22 @@ namespace AudioProject.Infrastructure
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.IsVisible);
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.SortOrder);
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.Description);
-            
 
+            // Orders
 
+            modelBuilder.Entity<Orders>().Property(u => u.OrderStatus);
+            modelBuilder.Entity<Orders>().Property(u => u.UserId);            
+            modelBuilder.Entity<Orders>().HasMany<OrderFiles>(u => u.OrderFiles).WithOne(u => u.Order).HasForeignKey(u => u.OrderId);
+            modelBuilder.Entity<Orders>().HasMany<OrderItems>(u => u.OrderItems).WithOne(u => u.Order).HasForeignKey(u => u.OrderId);
 
+            // Order Items
+            modelBuilder.Entity<OrderItems>().Property(u => u.OrderId).IsRequired();
+            modelBuilder.Entity<OrderItems>().Property(u => u.OrderStatus);
+            modelBuilder.Entity<OrderItems>().Property(u => u.OrderTypeId);
+
+            //Order Files
+            modelBuilder.Entity<OrderFiles>().Property(u => u.OrderId).IsRequired();
+            modelBuilder.Entity<OrderFiles>().Property(u => u.FileName);
 
             // User
             modelBuilder.Entity<User>().Property(u => u.Username).IsRequired().HasMaxLength(100);

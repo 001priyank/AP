@@ -17,6 +17,12 @@ export class DataService {
         this._pageSize = pageSize;
     }
 
+    getOnly() {
+        var uri = this._baseUri +'/' ;
+
+        return this.http.get(uri)
+            .map(response => (<Response>response));
+    }
     get(page: number) {
         var uri = this._baseUri + page.toString() + '/' + this._pageSize.toString();
 

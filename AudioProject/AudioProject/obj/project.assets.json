@@ -11085,10 +11085,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AudioProject\\AudioProject\\AudioProject.csproj",
+      "projectUniqueName": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AP\\AudioProject\\AudioProject\\AudioProject.csproj",
       "projectName": "AudioProject",
-      "projectPath": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AudioProject\\AudioProject\\AudioProject.csproj",
-      "outputPath": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AudioProject\\AudioProject\\obj\\",
+      "projectPath": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AP\\AudioProject\\AudioProject\\AudioProject.csproj",
+      "outputPath": "C:\\Users\\prisingh\\Desktop\\audioam\\AudioProject\\AP\\AudioProject\\AudioProject\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"

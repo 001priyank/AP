@@ -11,6 +11,7 @@ using System.Security.Claims;
 using System.IO;
 using Newtonsoft.Json.Serialization;
 using Amazon.S3;
+using AudioProject.Infrastructure.Services.Abstract;
 
 namespace AudioProject
 {
@@ -66,9 +67,11 @@ namespace AudioProject
             services.AddScoped<IRoleRepository, RoleRepository>();
             services.AddScoped<ILoggingRepository, LoggingRepository>();
 
+
             // Services
             services.AddScoped<IMembershipService, MembershipService>();
             services.AddScoped<IEncryptionService, EncryptionService>();
+            services.AddScoped<IOrderTypeService, OrderTypeService>();
 
             services.AddAuthentication();
 

@@ -9,9 +9,10 @@ using AudioProject.Entities.OrderManagement;
 namespace AudioProject.Migrations
 {
     [DbContext(typeof(AudioProjectContext))]
-    partial class AudioProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20170603135025_orders")]
+    partial class orders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -44,9 +45,13 @@ namespace AudioProject.Migrations
 
                     b.Property<int>("OrderId");
 
+                    b.Property<int?>("OrderItemsId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
+
+                    b.HasIndex("OrderItemsId");
 
                     b.ToTable("OrderFiles");
                 });
@@ -239,6 +244,10 @@ namespace AudioProject.Migrations
                         .WithMany("OrderFiles")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("AudioProject.Entities.OrderManagement.OrderItems")
+                        .WithMany("OrderFiles")
+                        .HasForeignKey("OrderItemsId");
                 });
 
             modelBuilder.Entity("AudioProject.Entities.OrderManagement.OrderItems", b =>

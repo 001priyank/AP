@@ -13,8 +13,7 @@ namespace AudioProject.Entities.OrderManagement
         public string Description { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public int OrderId { get; set; }
-        public Orders Order { get; set; }
-        public List<OrderFiles> OrderFiles { get; set; }
+        public Orders Order { get; set; }        
         public int CompletionPercent { get; set; }
 
     }

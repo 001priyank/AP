@@ -7,3 +7,13 @@ C:\Users\prisingh\Desktop\audioam\AudioProject\AudioProject\AudioProject\obj\Deb
 C:\Users\prisingh\Desktop\audioam\AudioProject\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.AssemblyInfo.cs
 C:\Users\prisingh\Desktop\audioam\AudioProject\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.dll
 C:\Users\prisingh\Desktop\audioam\AudioProject\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.pdb
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\bin\Debug\netcoreapp1.1\AudioProject.deps.json
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\bin\Debug\netcoreapp1.1\AudioProject.runtimeconfig.json
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\bin\Debug\netcoreapp1.1\AudioProject.runtimeconfig.dev.json
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\bin\Debug\netcoreapp1.1\AudioProject.dll
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\bin\Debug\netcoreapp1.1\AudioProject.pdb
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.AssemblyInfo.cs
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.dll
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.pdb
+C:\Users\prisingh\Desktop\audioam\AudioProject\AP\AudioProject\AudioProject\obj\Debug\netcoreapp1.1\AudioProject.csprojResolveAssemblyReference.cache

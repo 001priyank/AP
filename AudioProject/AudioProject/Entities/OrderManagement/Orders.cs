@@ -11,8 +11,7 @@ namespace AudioProject.Entities.OrderManagement
         public int Id { get; set; }
         public User user { get; set; }
         public int UserId { get; set; }
-        public int OrderStatusId { get; set; }
-        public OrderStatus orderStatus { get; set; }
+        public OrderStatus OrderStatus { get; set; }
         public List<OrderItems> OrderItems { get; set; }
         public List<OrderFiles> OrderFiles { get; set; }
 

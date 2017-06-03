@@ -9,9 +9,10 @@ using AudioProject.Entities.OrderManagement;
 namespace AudioProject.Migrations
 {
     [DbContext(typeof(AudioProjectContext))]
-    partial class AudioProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20170603140621_orders1")]
+    partial class orders1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
