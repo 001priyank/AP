@@ -1,3 +1,5 @@
+import {OrderType} from "./orderType";
+
 export class OrderTypeCategory {
     Id:number;
     CategoryName: string;
@@ -5,4 +7,5 @@ export class OrderTypeCategory {
     SortOrder: number;
     IsActive: boolean;
     IsVisible:boolean;
+    OrderTypes: Array<OrderType>;
 }

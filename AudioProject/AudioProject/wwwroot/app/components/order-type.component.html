@@ -1,0 +1,18 @@
+<div class="container">
+
+    <div class="row">
+         
+         <div *ngFor="let orderTypeCategory of _orderTypeCategories">
+            <li>
+                <div *ngFor="let orderType of orderTypeCategory.OrderTypes">
+                    {{orderType?.OrderTypeDisplayName}} - {{orderType?.Price}} $- {{orderType?.PriceFuture}} $
+            <li *ngFor="let orderTypeDescription of orderType.OrderTypeDescriptions">
+                {{orderTypeDescription.Description}}
+            </li>
+        </div>
+        </li>
+        <a [routerLink]="['/order']">Home</a>
+    </div> 
+
+    </div>
+</div>

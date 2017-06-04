@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <UserSecretsId>408c7236-1932-4c0b-afb8-fb180898e625</UserSecretsId>
     <PackageTargetFallback>portable-net45+win8</PackageTargetFallback>
+    <PreBuildEvent>gulp build-spa</PreBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>

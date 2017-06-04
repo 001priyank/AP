@@ -16,6 +16,7 @@ namespace AudioProject.Entities.Orders
         public List<OrderTypeDescriptions> OrderTypeDescriptions { get; set; }
         public int OrderTypeCategoryId { get; set; }
         public OrderTypeCategorys OrderTypeCategory { get; set; }
+        public bool Selected { get; set; }
         public int? SortOrder { get; set; }
         public bool? IsActive { get; set; }
         public bool? IsVisible { get; set; }

@@ -12,6 +12,7 @@ using System.IO;
 using Newtonsoft.Json.Serialization;
 using Amazon.S3;
 using AudioProject.Infrastructure.Services.Abstract;
+using Newtonsoft.Json;
 
 namespace AudioProject
 {
@@ -72,6 +73,7 @@ namespace AudioProject
             services.AddScoped<IMembershipService, MembershipService>();
             services.AddScoped<IEncryptionService, EncryptionService>();
             services.AddScoped<IOrderTypeService, OrderTypeService>();
+            services.AddScoped<IOrderService, OrderService>();
 
             services.AddAuthentication();
 
@@ -85,12 +87,13 @@ namespace AudioProject
                 });
 
             });
-
+          
             // Add MVC services to the services container.
             services.AddMvc()
 
             .AddJsonOptions(opt =>
             {
+                opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 var resolver = opt.SerializerSettings.ContractResolver;
                 if (resolver != null)
                 {

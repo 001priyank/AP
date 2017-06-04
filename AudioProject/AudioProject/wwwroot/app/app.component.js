@@ -29,21 +29,22 @@ var AppComponent = (function () {
             var _user = this.membershipService.getLoggedInUser();
             return _user.Username;
         }
-        else
-            return 'Account';
+        else {
+            return "Account";
+        }
     };
     AppComponent.prototype.logout = function () {
         this.membershipService.logout()
             .subscribe(function (res) {
-            localStorage.removeItem('user');
-        }, function (error) { return console.error('Error: ' + error); }, function () { });
+            localStorage.removeItem("user");
+        }, function (error) { return console.error("Error: " + error); }, function () { });
     };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
-        selector: 'photogallery-app',
-        templateUrl: './app/app.component.html'
+        selector: "photogallery-app",
+        templateUrl: "./app/app.component.html"
     }),
     __metadata("design:paramtypes", [membership_service_1.MembershipService,
         common_1.Location])

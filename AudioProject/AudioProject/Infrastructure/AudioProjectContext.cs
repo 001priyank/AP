@@ -58,6 +58,8 @@ namespace AudioProject.Infrastructure
             modelBuilder.Entity<OrderTypes>().Property(u => u.OrderTypeName).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<OrderTypes>().Property(u => u.Price).IsRequired();
             modelBuilder.Entity<OrderTypes>().Property(u => u.PriceFuture);
+            modelBuilder.Entity<OrderTypes>().Property(u => u.OrderTypeCategoryId);
+            modelBuilder.Entity<OrderTypes>().Ignore(u => u.Selected);
             modelBuilder.Entity<OrderTypes>().HasMany<OrderTypeDescriptions>(u => u.OrderTypeDescriptions).WithOne(u => u.OrderType).HasForeignKey(u => u.OrderTypeId);
 
             // Order description
@@ -65,6 +67,7 @@ namespace AudioProject.Infrastructure
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.IsVisible);
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.SortOrder);
             modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.Description);
+            modelBuilder.Entity<OrderTypeDescriptions>().Property(u => u.OrderTypeId);
 
             // Orders
 

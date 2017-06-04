@@ -35,7 +35,7 @@ var PhotosComponent = (function (_super) {
     };
     PhotosComponent.prototype.getPhotos = function () {
         var self = this;
-        self.photosService.getOnly()
+        self.photosService.getAll()
             .subscribe(function (res) {
             var data = res.json();
             self._orderTypeCategories = data.OrderTypeCategories;

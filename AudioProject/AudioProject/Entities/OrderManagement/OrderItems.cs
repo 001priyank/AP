@@ -1,4 +1,5 @@
 ﻿using AudioProject.Entities;
+using AudioProject.Entities.Orders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace AudioProject.Entities.OrderManagement
     {
         public int Id { get; set; }
         public int OrderTypeId { get; set; }
+        public OrderTypes OrderType { get; set; }
         public string Description { get; set; }
         public OrderStatus OrderStatus { get; set; }
         public int OrderId { get; set; }

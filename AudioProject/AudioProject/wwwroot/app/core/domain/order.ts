@@ -1,8 +1,10 @@
+import {OrderItem} from "./orderItem";
+import {OrderFile} from "./orderFile";
+
 export class Order {
     Id: number;
     UserId: number;
     OrderStatus: number ;
-    Thumbnail: string;
-    OrderItems: any;
-    OrderFiles: any;
+    OrderItems: Array<OrderItem>;
+    OrderFiles: Array<OrderFile>;
 }

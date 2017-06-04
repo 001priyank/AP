@@ -10,17 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var order_type_component_1 = require("./order-type.component");
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(orderTypeComponent) {
+        this.orderTypeComponent = orderTypeComponent;
     }
     return HomeComponent;
 }());
 HomeComponent = __decorate([
     core_1.Component({
-        selector: 'home',
-        templateUrl: './app/components/home.component.html'
+        selector: "home",
+        templateUrl: "./app/components/home.component.html",
+        providers: [order_type_component_1.OrderTypeComponent]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [order_type_component_1.OrderTypeComponent])
 ], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map

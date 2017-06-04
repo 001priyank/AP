@@ -22,7 +22,7 @@ export class PhotosComponent extends Paginated implements OnInit {
 
     getPhotos(): void {
         let self = this;
-        self.photosService.getOnly()
+        self.photosService.getAll()
             .subscribe(res => {
 
                 var data: any = res.json();

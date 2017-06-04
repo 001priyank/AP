@@ -33,13 +33,16 @@ var data_service_1 = require("./core/services/data.service");
 var membership_service_1 = require("./core/services/membership.service");
 var utility_service_1 = require("./core/services/utility.service");
 var notification_service_1 = require("./core/services/notification.service");
+var order_type_component_1 = require("./components/order-type.component");
+var order_component_1 = require("./components/order.component");
+var order_service_1 = require("./core/services/order.service");
 var AppBaseRequestOptions = (function (_super) {
     __extends(AppBaseRequestOptions, _super);
     function AppBaseRequestOptions() {
         var _this = _super.call(this) || this;
         _this.headers = new http_2.Headers();
-        _this.headers.append('Content-Type', 'application/json');
-        _this.body = '';
+        _this.headers.append("Content-Type", "application/json");
+        _this.body = "";
         return _this;
     }
     return AppBaseRequestOptions;
@@ -58,10 +61,11 @@ AppModule = __decorate([
             routes_1.routing,
             account_module_1.AccountModule
         ],
-        declarations: [app_component_1.AppComponent, album_photos_component_1.AlbumPhotosComponent, home_component_1.HomeComponent, photos_component_1.PhotosComponent, albums_component_1.AlbumsComponent],
-        providers: [data_service_1.DataService, membership_service_1.MembershipService, utility_service_1.UtilityService, notification_service_1.NotificationService,
+        declarations: [app_component_1.AppComponent, album_photos_component_1.AlbumPhotosComponent, order_type_component_1.OrderTypeComponent, order_component_1.OrderComponent, home_component_1.HomeComponent, photos_component_1.PhotosComponent, albums_component_1.AlbumsComponent],
+        providers: [data_service_1.DataService, membership_service_1.MembershipService, utility_service_1.UtilityService, notification_service_1.NotificationService, order_service_1.OrderService,
             { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
             { provide: http_2.RequestOptions, useClass: AppBaseRequestOptions }],
+        exports: [order_type_component_1.OrderTypeComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

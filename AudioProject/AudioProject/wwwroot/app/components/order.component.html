@@ -1,0 +1,15 @@
+Create Order
+<div class="container">
+    Order
+    <div class="row" *ngFor="let order of _orders">
+      
+        <div class="row" *ngFor="let item of order.OrderItems">
+             
+                {{item?.OrderType.OrderTypeName}}-{{item?.OrderType.OrderTypeDisplayName}} {{item?.OrderType?.Price}} $- {{item?.OrderType?.PriceFuture}} $<input type="checkbox" [checked]="item.Selected" (change)="item.Selected = !item.Selected" />             
+                       
+        </div>
+         <button class="btn btn-default"  type="button" (click)="AddOrder(order)">Add Order</button>
+    </div>
+
+     <button class="btn btn-default"  type="button" (click)="SubmitAllOrders()">Submit All Orders</button>
+</div>

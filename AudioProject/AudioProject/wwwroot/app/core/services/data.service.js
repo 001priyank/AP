@@ -19,7 +19,7 @@ var DataService = (function () {
         this._baseUri = baseUri;
         this._pageSize = pageSize;
     };
-    DataService.prototype.getOnly = function () {
+    DataService.prototype.getAll = function () {
         var uri = this._baseUri + '/';
         return this.http.get(uri)
             .map(function (response) { return response; });

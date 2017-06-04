@@ -1,3 +1,4 @@
+import {OrderTypeDescription} from "./orderTypeDescription";
 export class OrderType {
     Id: number;
     OrderTypeName: string;
@@ -8,4 +9,5 @@ export class OrderType {
     SortOrder: number;
     IsActive: boolean;
     IsVisible:boolean;
+    OrderTypeDescriptions: Array<OrderTypeDescription>;
 }

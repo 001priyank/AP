@@ -19,6 +19,11 @@ var DataService = (function () {
         this._baseUri = baseUri;
         this._pageSize = pageSize;
     };
+    DataService.prototype.getAll = function () {
+        var uri = this._baseUri + '/';
+        return this.http.get(uri)
+            .map(function (response) { return response; });
+    };
     DataService.prototype.get = function (page) {
         var uri = this._baseUri + page.toString() + '/' + this._pageSize.toString();
         return this.http.get(uri)

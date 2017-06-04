@@ -80,8 +80,6 @@ namespace AudioProject.Migrations
 
                     b.Property<int>("OrderStatus");
 
-                    b.Property<int>("OrderStatusId");
-
                     b.Property<int>("UserId");
 
                     b.HasKey("Id");

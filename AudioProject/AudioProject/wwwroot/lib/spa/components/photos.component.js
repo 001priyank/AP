@@ -27,22 +27,18 @@ var PhotosComponent = (function (_super) {
     function PhotosComponent(photosService) {
         var _this = _super.call(this, 0, 0, 0) || this;
         _this.photosService = photosService;
-        _this._photosAPI = 'api/photos/';
+        _this._photosAPI = 'api/OrderType/';
         return _this;
     }
     PhotosComponent.prototype.ngOnInit = function () {
-        this.photosService.set(this._photosAPI, 12);
         this.getPhotos();
     };
     PhotosComponent.prototype.getPhotos = function () {
         var self = this;
-        self.photosService.get(self._page)
+        self.photosService.getAll()
             .subscribe(function (res) {
             var data = res.json();
-            self._photos = data.Items;
-            self._page = data.Page;
-            self._pagesCount = data.TotalPages;
-            self._totalCount = data.TotalCount;
+            self._orderTypeCategories = data.OrderTypeCategories;
         }, function (error) { return console.error('Error: ' + error); });
     };
     PhotosComponent.prototype.search = function (i) {
